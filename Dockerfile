@@ -4,5 +4,7 @@ FROM circleci/postgres:10.4
 
 LABEL maintainer="Andrew Newell (PinsterTeam) <pinsterteam@gmail.com>"
 
-RUN apk --no-cache add pg_dump && \
-	rm -rf /var/cache/apk/*
+RUN apt-get update && \
+    apt-get install pg_dump -y && \
+    apt-get purge -y && \
+    rm -rf /var/lib/apt/lists/*
