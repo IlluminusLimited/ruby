@@ -1,6 +1,6 @@
 # vim:set ft=dockerfile:
 
-FROM circleci/ruby:2.4.4-jessie-node
+FROM circleci/ruby:2.6.2-jessie-node
 
 LABEL maintainer="Andrew Newell (PinsterTeam) <pinsterteam@gmail.com>"
 
